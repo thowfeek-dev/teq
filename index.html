@@ -89,7 +89,7 @@
     <div id="altServices"></div>
     <div id="features"></div>
     <div id="testimonials"></div>
-    <div id="pricing"></div>
+    <!-- <div id="pricing"></div> -->
     <div id="contact"></div>
     <script src="pages/hero.js"></script>
     <script src="pages/clients.js"></script>
@@ -99,7 +99,7 @@
     <script src="pages/altservices.js"></script>
     <script src="pages/features.js"></script>
     <script src="pages/testimonials.js"></script>
-    <script src="pages/pricing.js"></script>
+    <!-- <script src="pages/pricing.js"></script> -->
     <script src="pages/contact.js"></script>
 
 
@@ -110,7 +110,7 @@
   </main>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      ['hero', 'clients', 'about', 'status', 'services', 'altServices', 'features', 'testimonials', 'pricing', 'contact'].forEach(section => {
+      ['hero', 'clients', 'about', 'status', 'services', 'altServices', 'features', 'testimonials', 'contact'].forEach(section => {
         document.getElementById(`${section}`).innerHTML = window[`${section}Section`];
       });
     });
