@@ -9,7 +9,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.jpg" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -38,10 +38,9 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">TEQ⚡</h1>
-      </a>
+        <h1><img src="assets/img/favicon.jpg" alt="TEQ⚡" style="width: 100px; height: auto;"></h1>
+    </a>
+    
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -84,8 +83,8 @@
     <div id="hero"></div>
     <div id="clients"></div>
     <div id="about"></div>
-    <div id="status"></div>
     <div id="services"></div>
+    <div id="status"></div>
     <div id="altServices"></div>
     <div id="features"></div>
     <div id="testimonials"></div>
@@ -94,8 +93,8 @@
     <script src="pages/hero.js"></script>
     <script src="pages/clients.js"></script>
     <script src="pages/about.js"></script>
-    <script src="pages/status.js"></script>
     <script src="pages/services.js"></script>
+    <script src="pages/status.js"></script>
     <script src="pages/altservices.js"></script>
     <script src="pages/features.js"></script>
     <script src="pages/testimonials.js"></script>
@@ -110,9 +109,10 @@
   </main>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      ['hero', 'clients', 'about', 'status', 'services', 'altServices', 'features', 'testimonials', 'contact'].forEach(section => {
+      ['hero', 'clients', 'about',  'services', 'status','altServices', 'features', 'testimonials', 'contact'].forEach(section => {
         document.getElementById(`${section}`).innerHTML = window[`${section}Section`];
       });
+      new PureCounter();
     });
   </script>
 

@@ -4,30 +4,36 @@
 
       <div class="container" data-aos="fade-up">
 
+        <!-- Section Title -->
+        <div class="section-title">
+          <h2>BRANDS WE WORK WITH</h2>
+          <p>Our partnerships with leading technology brands ensure we deliver top-notch services and solutions.</p>
+        </div><!-- End Section Title -->
+
         <div class="row gy-4">
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+            <img src="https://download.logo.wine/logo/TP-Link/TP-Link-Logo.wine.png" class="img-fluid" alt="TP-Link">
           </div><!-- End Client Item -->
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+            <img src="https://download.logo.wine/logo/Ubiquiti_Networks/Ubiquiti_Networks-Logo.wine.png" alt="Ubiquiti Networks">
           </div><!-- End Client Item -->
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+            <img src="https://www.jimsantennas.com.au/wp-content/uploads/2023/01/ruijie-logo-1.png" class="img-fluid" alt="Ruijie">
           </div><!-- End Client Item -->
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Linksys_logo.svg/2560px-Linksys_logo.svg.png" class="img-fluid" alt="Linksys">
           </div><!-- End Client Item -->
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+            <img src="https://www.nordencommunication.com/uploads/media/Norden%20Logo6209fa1176754.png" class="img-fluid" alt="Norden">
           </div><!-- End Client Item -->
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+            <img src="https://fr.eufy.com/cdn/shop/files/eufy_logo_600x600.png?v=1700620754" class="img-fluid" alt="Eufy">
           </div><!-- End Client Item -->
 
         </div>
@@ -36,5 +42,5 @@
 
     </section>
   `;
-  window.clientsSection = clientsSection; // Expose to global scope if needed
+  window.clientsSection = clientsSection;
 })();

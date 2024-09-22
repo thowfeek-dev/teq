@@ -6,7 +6,7 @@
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>Contact</h2>
-    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    <p>Get In Touch</p>
   </div><!-- End Section Title -->
 
   <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
@@ -27,7 +27,7 @@
           <i class="bi bi-telephone flex-shrink-0"></i>
           <div>
             <h3>Call Us</h3>
-            <p>+1 5589 55488 55</p>
+            <p>+974 3360 93155</p>
           </div>
         </div><!-- End Info Item -->
 
