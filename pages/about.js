@@ -15,9 +15,9 @@
           <div class="content col-xl-5 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
             <h3>Teq</h3>
             <p>
-              Teq is a leading company in Qatar, specializing in civil construction, electromechanical services, and
-              Extra Low Voltage (ELV) systems. We deliver reliable and innovative solutions to both residential and
-              commercial clients, focusing on quality, customer satisfaction, and cutting-edge technology.
+              Teq is a leading company in Qatar, specializing in electromechanical services, and Extra Low Voltage (ELV) systems. We deliver reliable and innovative solutions to both residential and commercial clients, focusing on quality, customer satisfaction, and cutting-edge technology.
+              </p>
+              <p> Our expert team is committed to providing energy-efficient systems that meet international standards. We offer comprehensive project management, from design to implementation, ensuring timely delivery and cost-effective solutions. Teq continuously strives to enhance its services through ongoing research and development.
             </p>
             <a href="#" class="about-btn align-self-center align-self-xl-start"><span>About us</span> <i
                 class="bi bi-chevron-right"></i></a>

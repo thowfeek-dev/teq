@@ -748,13 +748,14 @@ section,
   padding: 20px 40px;
   max-width: 90%;
   transition: 0.3s;
-  opacity: 0.5;
-  filter: grayscale(100);
+  /* opacity: 0.7; */
+  /* filter: grayscale(100); */
 }
 
 .clients .client-logo img:hover {
   filter: none;
   opacity: 1;
+  background:rgb(208, 226, 249);
 }
 
 @media (max-width: 640px) {
