@@ -76,8 +76,6 @@
                 subject: document.getElementById("subject").value,
                 message: document.getElementById("message").value,
             };
-            const serviceid = config.serviceid || serviceid;
-            const templateid = config.templateid || templateid;
             emailjs.send(serviceid, templateid, templateParams).then(
                 function (response) {
                     console.log("SUCCESS!", response.status, response.text);
