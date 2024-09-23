@@ -19,29 +19,32 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
-  <!-- teq CSS Files -->
   <link href="assets/teq/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/teq/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/teq/aos/aos.css" rel="stylesheet">
   <link href="assets/teq/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/teq/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "A5NagWPmm9woT37r4",
+      });
+    })();
+  </script>
 
 </head>
 
 <body class="index-page">
-
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <h1><img src="assets/img/favicon.jpg" alt="TEQ⚡" style="width: 100px; height: auto;"></h1>
-    </a>
-    
-
+      </a>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home<br></a></li>
@@ -55,8 +58,7 @@
               <li><a href="#">🔌 Structured Cabling</a></li>
               <li><a href="#">🏠 Home Automation</a></li>
               <li><a href="#">📢 Public Address Systems</a></li>
-
-              <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+               <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a> -->
             <!-- <ul>
               <li><a href="#">Deep Dropdown 1</a></li>
@@ -67,22 +69,16 @@
             </ul> -->
           <!-- </li> -->
             </ul>
-          </li> 
+          </li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
       <a class="btn-getstarted" href="index.html#about">Get Started</a>
-
     </div>
   </header>
 
   <main class="main">
-
-
-
-    <!-- About Section -->
     <div id="hero"></div>
     <div id="clients"></div>
     <div id="about"></div>
@@ -93,6 +89,7 @@
     <div id="testimonials"></div>
     <!-- <div id="pricing"></div> -->
     <div id="contact"></div>
+
     <script src="pages/hero.js"></script>
     <script src="pages/clients.js"></script>
     <script src="pages/about.js"></script>
@@ -101,26 +98,20 @@
     <script src="pages/altservices.js"></script>
     <script src="pages/features.js"></script>
     <script src="pages/testimonials.js"></script>
-    <!-- <script src="pages/pricing.js"></script> -->
+     <!-- <script src="pages/pricing.js"></script> -->
     <script src="pages/contact.js"></script>
-
-
-
-
-
-
   </main>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      ['hero', 'clients', 'about',  'services', 'status','altServices', 'features', 'testimonials', 'contact'].forEach(section => {
-        document.getElementById(`${section}`).innerHTML = window[`${section}Section`];
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        ['hero', 'clients', 'about', 'services', 'status', 'altServices', 'features', 'testimonials', 'contact'].forEach(section => {
+          document.getElementById(`${section}`).innerHTML = window[`${section}Section`];
+        });
       });
-      new PureCounter();
-    });
-  </script>
+    </script>
+ 
 
   <footer id="footer" class="footer">
-
     <div class="container">
       <div class="copyright text-center ">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">TEQ⚡</strong> <span>All Rights Reserved</span></p>
@@ -135,7 +126,6 @@
         Designed by <a href="https://teq.qa/">Teq.qa</a>
       </div>  -->
     </div>
-
   </footer>
 
   <!-- Scroll Top -->

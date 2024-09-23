@@ -1712,9 +1712,25 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
+
 .starter-section {
-  /* Add your styles here */
+}
+button[type="submit"] {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #008B5C;
+  transform: scale(1.05);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.95);
 }
