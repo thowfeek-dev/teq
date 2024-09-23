@@ -76,7 +76,7 @@
                 subject: document.getElementById("subject").value,
                 message: document.getElementById("message").value,
             };
-            emailjs.send(serviceid, templateid, templateParams).then(
+            emailjs.send("service_vfatsnx","template_kpo3k2d", templateParams).then(
                 function (response) {
                     console.log("SUCCESS!", response.status, response.text);
                     document.querySelector(".sent-message").style.display = "block";
