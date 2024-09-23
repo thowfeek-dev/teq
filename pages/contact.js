@@ -1,5 +1,5 @@
 (function () {
-  const contactSection = `
+    const contactSection = `
     <section id="contact" class="contact section">
       <div class="container section-title">
         <h2>Contact</h2>
@@ -47,8 +47,13 @@
                   <textarea id="message" name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
                 </div>
                 <div class="col-md-12 text-center">
-                  <div class="error-message" style="display:none;">Failed to send the message!</div>
-                  <div class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
+                 <div class="error-message" style="display:none; color: #ff4d4d; background-color: #ffe6e6; border: 1px solid #ffcccc; padding: 15px; border-radius: 5px; margin-top: 10px;">
+    <strong>Error:</strong> Failed to send the message! Please try again.
+</div>
+<div class="sent-message" style="display:none; color: #28a745; background-color: #d4edda; border: 1px solid #c3e6cb; padding: 15px; border-radius: 5px; margin-top: 10px;">
+    <strong>Success:</strong> Your message has been sent. Thank you!
+</div>
+
                   <button type="submit">Send Message</button>
                 </div>
               </div>
@@ -59,29 +64,32 @@
     </section>`;
     window.contactSection = contactSection;
 
-  document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("contact").innerHTML = contactSection;
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("contact").innerHTML = contactSection;
 
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-      event.preventDefault();
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
 
-      const templateParams = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value,
-      };
-
-      emailjs.send("service_vfatsnx", "template_kpo3k2d", templateParams)
-        .then(function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-          document.querySelector(".sent-message").style.display = "block"; 
-          document.querySelector(".error-message").style.display = "none";
-        }, function (error) {
-          console.log("FAILED...", error);
-          document.querySelector(".error-message").style.display = "block"; 
-          document.querySelector(".sent-message").style.display = "none"; 
+            const templateParams = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
+            };
+            const serviceid = config.serviceid || serviceid;
+            const templateid = config.templateid || templateid;
+            emailjs.send(serviceid, templateid, templateParams).then(
+                function (response) {
+                    console.log("SUCCESS!", response.status, response.text);
+                    document.querySelector(".sent-message").style.display = "block";
+                    document.querySelector(".error-message").style.display = "none";
+                },
+                function (error) {
+                    console.log("FAILED...", error);
+                    document.querySelector(".error-message").style.display = "block";
+                    document.querySelector(".sent-message").style.display = "none";
+                }
+            );
         });
     });
-  });
 })();
