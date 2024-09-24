@@ -30,7 +30,7 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
-        includedLanguages: 'ar,en,hi',
+        includedLanguages: 'ar,en,hi,fr',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
       }, 'google_translate_element');
     }
@@ -52,6 +52,22 @@
 <body class="index-page">
   <style>
      :root {
+
+      --background-color: #3C3D37;
+      --heading-color: #ffffff;
+      --default-color: #ffffff;
+      --accent-color: orange; 
+      --surface-color: #444444; 
+      --contrast-color: #222222;
+
+      --nav-hover-color: orange;
+      --nav-mobile-background-color: #3C3D37;
+      --nav-dropdown-background-color: #3C3D37;
+      --nav-dropdown-color: #fff;
+      --nav-dropdown-hover-color: orange;
+    }
+
+    body.light-mode {
       --background-color: #ffffff;
       --heading-color: #222222;
       --default-color: #444444;
@@ -65,21 +81,6 @@
       --nav-dropdown-background-color: #ffffff;
       --nav-dropdown-color: #444444;
       --nav-dropdown-hover-color: #3498db;
-    }
-
-    body.dark-mode {
-      --background-color: #3C3D37;
-      --heading-color: #ffffff;
-      --default-color: #ffffff;
-      --accent-color: orange; 
-      --surface-color: #444444; 
-      --contrast-color: #222222;
-
-      --nav-hover-color: orange;
-      --nav-mobile-background-color: #3C3D37;
-      --nav-dropdown-background-color: #3C3D37;
-      --nav-dropdown-color: #fff;
-      --nav-dropdown-hover-color: orange;
     }
 
     
@@ -121,7 +122,7 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <button id="dark-mode-toggle" class="btn-getstarted">Dark Mode</button>
+      <button id="dark-mode-toggle" class="btn-getstarted"> Light Mode</button>
 
       
     </div>
@@ -157,11 +158,11 @@
         const darkModeToggle = document.getElementById("dark-mode-toggle");
 
         darkModeToggle.addEventListener("click", () => {
-          document.body.classList.toggle("dark-mode");
-          if (document.body.classList.contains('dark-mode')) {
-            darkModeToggle.textContent = 'Light Mode';
-          } else {
+          document.body.classList.toggle("light-mode");
+          if (document.body.classList.contains('light-mode')) {
             darkModeToggle.textContent = 'Dark Mode';
+          } else {
+            darkModeToggle.textContent = 'Light Mode';
           }
         });
 
