@@ -1735,3 +1735,26 @@ button[type="submit"]:hover {
 button[type="submit"]:active {
   transform: scale(0.95);
 }
+
+#google_translate_element {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.goog-te-gadget-simple {
+  background-color: transparent;
+  border: none;
+  padding: 2px;
+  font-size: 12px;
+}
+
+.goog-te-gadget-icon {
+  display: none;
+}
+
+.goog-te-combo {
+  font-size: 12px;
+  padding: 2px;
+  height: auto;
+}

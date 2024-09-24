@@ -26,6 +26,18 @@
   <link href="assets/teq/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'ar,en,hi',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
   <!-- EmailJS SDK -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -33,15 +45,40 @@
       emailjs.init("aItFPRbeKPMdW25vp"); 
     })();
   </script>
+  
 
 </head>
 
 <body class="index-page">
+  <style>
+     :root {
+      --background-color: #ffffff;
+      --heading-color: #222222;
+      --default-color: #444444;
+      --accent-color: #3F72AF;
+      --surface-color: #ffffff;
+      --contrast-color: #ffffff;
+    }
+
+    body.dark-mode {
+      --background-color: #3C3D37;
+      --heading-color: #ffffff;
+      --default-color: #ffffff;
+      --accent-color: orange; 
+      --surface-color: #444444; 
+      --contrast-color: #222222;
+    }
+
+    
+
+  </style>
+  <div id="google_translate_element" class="ms-3"></div>
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <h1><img src="assets/img/favicon.jpg" alt="TEQ⚡" style="width: 100px; height: auto;"></h1>
       </a>
+      
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home<br></a></li>
@@ -71,7 +108,10 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+      <button id="dark-mode-toggle" class="btn-getstarted">Dark Mode</button>
+
+      
     </div>
   </header>
 
@@ -101,6 +141,11 @@
         ['hero', 'clients', 'about', 'services', 'status', 'altServices', 'features', 'testimonials','contact'].forEach(section => {
           document.getElementById(`${section}`).innerHTML = window[`${section}Section`];
         });
+        new PureCounter();
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+      darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+      });
       });
     </script>
     <script>
@@ -201,18 +246,18 @@
 
   <footer id="footer" class="footer">
     <div class="container">
-      <!-- <div class="copyright text-center ">
+      <div class="copyright text-center ">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">TEQ⚡</strong> <span>All Rights Reserved</span></p>
-      </div> -->
+      </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
         <a href=""><i class="bi bi-facebook"></i></a>
         <a href=""><i class="bi bi-instagram"></i></a>
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
-      <div class="credits d-flex justify-content-end">
+      <!-- <div class="credits d-flex justify-content-end">
         Designed by <a href="https://teq.qa/">Teq.qa</a>
-      </div> 
+      </div>  -->
     </div>
   </footer>
 
