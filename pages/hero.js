@@ -12,7 +12,7 @@
                       </div>
                   </div>
                   <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                      <img src="https://cdn.pixabay.com/photo/2018/01/21/10/01/smart-home-3096224_1280.jpg" class="img-fluid animated" alt="">
+                      <img src="./assets/img/hero.png" class="img-fluid animated" alt="">
                   </div>
               </div>
           </div>

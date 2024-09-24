@@ -58,6 +58,13 @@
       --accent-color: #3F72AF;
       --surface-color: #ffffff;
       --contrast-color: #ffffff;
+      --nav-color: #444444;
+
+      --nav-hover-color: #3498db;
+      --nav-mobile-background-color: #ffffff;
+      --nav-dropdown-background-color: #ffffff;
+      --nav-dropdown-color: #444444;
+      --nav-dropdown-hover-color: #3498db;
     }
 
     body.dark-mode {
@@ -67,6 +74,12 @@
       --accent-color: orange; 
       --surface-color: #444444; 
       --contrast-color: #222222;
+
+      --nav-hover-color: orange;
+      --nav-mobile-background-color: #3C3D37;
+      --nav-dropdown-background-color: #3C3D37;
+      --nav-dropdown-color: #fff;
+      --nav-dropdown-hover-color: orange;
     }
 
     
@@ -108,7 +121,6 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
       <button id="dark-mode-toggle" class="btn-getstarted">Dark Mode</button>
 
       
@@ -143,9 +155,16 @@
         });
         new PureCounter();
         const darkModeToggle = document.getElementById("dark-mode-toggle");
-      darkModeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-      });
+
+        darkModeToggle.addEventListener("click", () => {
+          document.body.classList.toggle("dark-mode");
+          if (document.body.classList.contains('dark-mode')) {
+            darkModeToggle.textContent = 'Light Mode';
+          } else {
+            darkModeToggle.textContent = 'Dark Mode';
+          }
+        });
+
       });
     </script>
     <script>

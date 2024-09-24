@@ -7,6 +7,8 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
   --background-color: #ffffff;
+
+  --service:#D2E0FB;
   /* Background color for the entire website, including individual sections */
   --default-color: #444444;
   /* Default color used for the majority of the text content across the entire website */
@@ -172,6 +174,7 @@ h6 {
   font-size: 14px;
   padding: 8px 25px;
   margin: 0 0 0 30px;
+  border: none;
   border-radius: 50px;
   transition: 0.3s;
 }
@@ -225,7 +228,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: var(--heading-color);
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
@@ -861,7 +864,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services .service-item {
-  background-color: #D2E0FB;
+  background-color:var(--background-color);
   box-shadow: 0px 0 30px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;

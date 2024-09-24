@@ -1,6 +1,6 @@
 (function() {
     const testimonialsSection = `
-    <section id="testimonials" class="testimonials section light-background">
+    <section id="testimonials" class="testimonials">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
